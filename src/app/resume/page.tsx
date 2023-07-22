@@ -1,6 +1,12 @@
 import Image from 'next/image';
 import myImage from '@/app/Amirhossein-Mafi.webp';
-import { MdEmail, MdLocationOn, MdSmartphone, MdWork } from 'react-icons/md';
+import {
+  MdEmail,
+  MdLightbulbCircle,
+  MdLocationOn,
+  MdSmartphone,
+  MdWork,
+} from 'react-icons/md';
 import {
   FaGithub,
   FaLinkedin,
@@ -12,7 +18,7 @@ import { IconType } from 'react-icons';
 
 export default function Resume() {
   return (
-    <div className="w-full flex items-center py-7 bg-slate-950 justify-center">
+    <div className="w-full flex items-center bg-slate-950 justify-center">
       <div className="w-[21cm] h-[29.7cm] bg-slate-200 flex text-slate-950 px-[1.25cm] py-[1.27cm]">
         <div className="flex h-full flex-col items-center w-1/3">
           <div className="w-5/6 border-[4px] p-1 border-indigo-800 rounded-full">
@@ -25,8 +31,8 @@ export default function Resume() {
             />
           </div>
           <div className="mb-1 text-2xl font-bold">Amirhossein Mafi</div>
-          <div className="mb-3 text-lg font-semibold">Front-End Developer</div>
-          <div className="self-stretch flex flex-col gap-1 mb-3">
+          <div className="mb-5 text-lg font-semibold">Front-End Developer</div>
+          <div className="self-stretch flex flex-col gap-1 mb-7">
             <Info Icon={MdLocationOn} text={'Tehran'} />
             <Info
               Icon={MdSmartphone}
@@ -67,25 +73,29 @@ export default function Resume() {
           <div className="font-medium">{'(2017 - 2021)'}</div>
         </div>
         <div className="w-2/3 pl-6">
-          <SectionHeader Icon={MdWork} text={'Skills'} />
+          <SectionHeader Icon={MdLightbulbCircle} text={'Skills'} />
           <Skills
             title="Fundamentals"
             skills={[
               'HTML',
               'CSS',
-              'JavaScript',
+              'JavaScript(ES6+)',
               'TypeScript',
               'Responsive Design',
               'Jest',
               'zod',
               'Three.js',
               'GLSL',
+              'REST API',
+              'Websocket',
+              'Clean Code',
             ]}
           />
           <Skills
             title="React.js"
             skills={[
               'Next.js',
+              'SSR',
               'Server Components',
               'Next App Router',
               'React Query',
@@ -107,6 +117,9 @@ export default function Resume() {
               'Vim',
               'Linux',
               'VSCode',
+              'Swagger',
+              'Postman',
+              'Figma',
             ]}
           />
           <SectionHeader Icon={MdWork} text={'Experience'} />
